@@ -150,19 +150,7 @@ with st.container():
     with col2:
         st.markdown('<div class="service-card">', unsafe_allow_html=True)
         st.image(
-            "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-            use_container_width=True,
-            caption="Classic Red Rose Display"
-        )
-        st.markdown("""
-        **Red Rose Display**  
-        _"Classic red roses, handpicked for the perfect romantic gesture or grand celebration."_  
-        """)
-        st.markdown('</div>', unsafe_allow_html=True)
-    with col3:
-        st.markdown('<div class="service-card">', unsafe_allow_html=True)
-        st.image(
-            "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1517973517987-4cbb3f17b6b0?auto=format&fit=crop&w=600&q=80",
             use_container_width=True,
             caption="Mixed Fresh Flowers for Events"
         )
@@ -171,10 +159,10 @@ with st.container():
         _"Make every event memorable with our vibrant fresh flower and rose arrangements designed for celebrations, birthdays, and more."_
         """)
         st.markdown('</div>', unsafe_allow_html=True)
-    with col4:
+    with col3:
         st.markdown('<div class="service-card">', unsafe_allow_html=True)
         st.image(
-            "https://images.unsplash.com/photo-1465101022946-4377e57745c3?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1514986888952-bd07c7989a4d?auto=format&fit=crop&w=600&q=80",
             use_container_width=True,
             caption="Bouquet of Pink Roses – Daily Delivery"
         )
@@ -185,7 +173,7 @@ with st.container():
         """)
         st.markdown('<a href="https://www.dropbox.com/scl/fi/ae3lkv4dzuejnl481k658/Flower2go-1-.pdf1010.pdf?rlkey=1rtn5hsf649a2z8i75h8q5g1k&st=tt1qmu2t&dl=0" target="_blank" class="pdf-link">Download Flower2Go PDF</a>', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
-    with col5:
+    with col4:
         st.markdown('<div class="service-card">', unsafe_allow_html=True)
         st.image(
             "https://images.unsplash.com/photo-1468327768560-75b778cbb551?auto=format&fit=crop&w=600&q=80",
@@ -193,8 +181,20 @@ with st.container():
             caption="Elegant White Rose Centerpieces"
         )
         st.markdown("""
-        **Elegant Centerpieces**
+        **Elegant Centerpieces**  
         _"Grace your venue with tall, elegant white rose centerpieces, perfect for special dinners and luxury events."_
+        """)
+        st.markdown('</div>', unsafe_allow_html=True)
+    with col5:
+        st.markdown('<div class="service-card">', unsafe_allow_html=True)
+        st.image(
+            "https://images.unsplash.com/photo-1424746219973-8fe3bd07d8e3?auto=format&fit=crop&w=600&q=80",
+            use_container_width=True,
+            caption="Colorful Spring Flower Basket"
+        )
+        st.markdown("""
+        **Spring Flower Baskets**  
+        _"Welcome spring year-round with baskets full of roses, daisies, tulips, and seasonal blooms."_  
         """)
         st.markdown('</div>', unsafe_allow_html=True)
 
@@ -217,7 +217,7 @@ with col4:
     st.markdown("""
     <div class="contact-info">
     <p>📧 <b>Email:</b> <a href="mailto:walsal201@gmail.com">walsal201@gmail.com</a></p>
-    <p>📞 <b>Tel:</b> <a href="tel:+251911628248">+251-911-628248</a></p>
+    <p>���� <b>Tel:</b> <a href="tel:+251911628248">+251-911-628248</a></p>
     <p>📍 <b>Location:</b> Bole, Atlas Hotel, Addis Ababa, Ethiopia</p>
     </div>
     """, unsafe_allow_html=True)
