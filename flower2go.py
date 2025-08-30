@@ -1,35 +1,213 @@
-streamlit.runtime.media_file_storage.MediaFileStorageError: This app has encountered an error. The original error message is redacted to prevent data leaks. Full error details have been recorded in the logs (if you're on Streamlit Cloud, click on 'Manage app' in the lower right of your app).
-Traceback:
-File "/mount/src/flower2go.py/flower2go.py", line 66, in <module>
-    st.sidebar.image("logo.png", width=100)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/metrics_util.py", line 443, in wrapped_func
-    result = non_optional_func(*args, **kwargs)
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/elements/image.py", line 207, in image
-    marshall_images(
-    ~~~~~~~~~~~~~~~^
-        self.dg._get_delta_path_str(),
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<6 lines>...
-        output_format,
-        ^^^^^^^^^^^^^^
-    )
-    ^
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/elements/lib/image_utils.py", line 447, in marshall_images
-    proto_img.url = image_to_url(
-                    ~~~~~~~~~~~~^
-        single_image, layout_config, clamp, channels, output_format, image_id
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/elements/lib/image_utils.py", line 303, in image_to_url
-    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/media_file_manager.py", line 225, in add
-    file_id = self._storage.load_and_get_id(
-        path_or_data, mimetype, kind, file_name
-    )
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 114, in load_and_get_id
-    self._read_file(path_or_data)
-    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
-File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/memory_media_file_storage.py", line 167, in _read_file
-    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+.hero { background-color: #FFD1DC; /* Match body background */ padding: 100px 0; color: #333; }
+
+.section { padding: 60px 0; }
+
+.footer { background-color: #000; /* Black color */ color: #fff; padding: 20px 0; }
+
+.footer-links a { color: #fff; text-decoration: none; }
+
+.footer-links a:hover { text-decoration: underline; }
+
+/* Additional Styles */ .wedding-service, .daily-delivery { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+
+.card { transition: transform 0.3s ease; border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; background-color: #fff; }
+
+.card-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; }
+
+.card-text { font-size: 1.1rem; }
+
+.card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); }
+
+.btn-primary { background-color: #007bff; border-color: #007bff; }
+
+.btn-primary:hover { background-color: #0056b3; border-color: #0056b3; }
+
+/* Maintain existing image styles */ .wedding-image, .event-image, .delivery-image { position: relative; overflow: hidden; border-radius: 10px; margin-bottom: 20px; }
+
+.wedding-image img, .event-image img, .delivery-image img { width: 100%; height: auto; object-fit: cover; transition: transform 0.5s ease; }
+
+/* Price table styles */ .price-table { background-color: #fff; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; margin-bottom: 20px; }
+
+/* Responsive adjustments */ @media (max-width: 768px) { body { margin-top: 76px; }
+
+.section {
+    padding: 40px 0;
+}
+
+.wedding-service, .special-event, .daily-delivery {
+    padding: 15px;
+}
+
+}
+
+/* Hero Section */ .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+
+/* Navigation */ .navbar-brand { display: flex; align-items: center; }
+
+.navbar-brand img { transition: transform 0.3s ease; height: 45px; width: auto; object-fit: contain; margin-right: 15px; padding: 5px; }
+
+.navbar-brand img:hover { transform: scale(1.1); }
+
+/* Services Section */ .card:hover { transform: translateY(-5px); }
+
+/* Contact Section */ .contact-info { padding: 20px; background: #f8f9fa; border-radius: 10px; }
+
+.contact-info p { margin-bottom: 15px; }
+
+.contact-info a { color: #007bff; text-decoration: none; transition: color 0.3s ease; }
+
+.contact-info a:hover { color: #0056b3; text-decoration: underline; }
+
+.contact-info i { margin-right: 10px; color: #007bff; }
+
+.map-container { border-radius: 10px; overflow: hidden; box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); }
+
+/* Wedding Service Section / .wedding-service { background-color: #FFB6C1; / Light pink color */ padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 40px; }
+
+.wedding-content { padding: 25px 15px; background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */ border-radius: 8px; }
+
+.wedding-quote { font-size: 1.1rem; line-height: 1.8; color: #555; max-width: 900px; margin: 0 auto; font-style: italic; }
+
+.wedding-service h3 { color: #007bff; font-size: 2rem; margin-bottom: 20px; }
+
+.additional-wedding-image { max-width: 600px; margin: 0 auto; overflow: hidden; border-radius: 10px; }
+
+.additional-wedding-image img { width: 100%; height: auto; transform: scale(1); transition: transform 0.5s ease; object-fit: cover; }
+
+.additional-wedding-image:hover img { transform: scale(1.02); }
+
+/* Special Events Section / .special-event { background-color: #FFDAB9; / Peach color */ padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 30px 0; }
+
+.event-content { padding: 20px; background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */ border-radius: 8px; }
+
+.event-content h3 { color: #007bff; font-size: 2.2rem; margin-bottom: 25px; position: relative; }
+
+.event-content h3:after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 3px; background: #007bff; }
+
+.event-quote { font-size: 1.1rem; line-height: 1.8; color: #555; margin-top: 20px; }
+
+.event-image { position: relative; overflow: hidden; border-radius: 10px; }
+
+.event-image img { width: 100%; height: auto; transform: scale(1); transition: transform 0.5s ease; }
+
+.event-image:hover img { transform: scale(1.05); }
+
+/* Daily Deliveries Section / .daily-delivery { background-color: #FFDAB9; / Peach color */ padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 30px 0; }
+
+.delivery-content { padding: 20px 30px; background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */ border-radius: 8px; }
+
+.delivery-content h3 { color: #007bff; font-size: 2.2rem; margin-bottom: 25px; position: relative; }
+
+.delivery-content h3:after { content: ''; position: absolute; bottom: -10px; left: 0; width: 60px; height: 3px; background: #007bff; }
+
+.delivery-quote { font-size: 1.1rem; line-height: 1.8; color: #555; margin-top: 20px; }
+
+.delivery-image { position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); }
+
+.delivery-image img { width: 100%; height: auto; transform: scale(1); transition: transform 0.6s ease; }
+
+.delivery-image:hover img { transform: scale(1.05); }
+
+/* About Us Section / .about-us { background-color: #FFB6C1; / Light pink color */ padding: 40px 0; margin: 20px 0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+
+.about-content { background-color: rgba(255, 255, 255, 0.9); padding: 25px; border-radius: 8px; margin: 15px 0; }
+
+.about-us h2 { color: #333; margin-bottom: 20px; }
+
+.about-us p { color: #444; line-height: 1.8; }
+
+/* Responsive Design */ @media (max-width: 768px) { .hero h1 { font-size: 2.5rem; }
+
+.contact-info {
+    margin-bottom: 30px;
+}
+
+.special-event {
+    padding: 20px;
+}
+
+.event-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.event-content h3:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.daily-delivery {
+    padding: 20px;
+}
+
+.delivery-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.delivery-content h3:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.delivery-image {
+    margin-bottom: 20px;
+}
+
+}
+
+.video-container { position: relative; padding-bottom: 56.25%; /* 16:9 aspect ratio */ height: 0; overflow: hidden; max-width: 100%; }
+
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+@media (max-width: 768px) { .video-container { margin-top: 20px; } }
+
+🌸 Flower2Go
+Home
+Services
+About
+Contact
+Welcome to Flower2Go
+Your Premier Flower Shop in Addis Ababa
+
+Our Services
+Image: 20.jpg not found
+
+Wedding Services
+You've said yes to the one person you're planning on spending your life with, and now it's time to plan for that special big day. At Flower 2 Go, we offer a variety of wedding bouquets that are catered to your specific needs. Our Bridal Bouquets are custom designed for your tastes, and make a great addition at any wedding ceremony!
+
+Special Events
+Bridesmaid Bouquets Some would say that there's nothing more exciting than planning a wedding. If you've just taken your relationship to that next level, then congratulations — it's time to plan for the big day! At Flower 2 Go, we have a variety of floral arrangements that are perfect for your special day. Our Bridesmaid Bouquets are designed with your needs in mind, and make for a great addition as you walk down the aisle!
+
+Image: Beautiful Bridesmaid.jpg not found
+
+Image: Elegant Floral Arrangement.jpg not found
+
+Daily Deliveries
+At Flower 2 Go, we're flower experts. We spend our days creating beautiful arrangements that you're sure to love and enjoy. We offer a wonderful variety of fresh cut flowers, gorgeous arrangements and specialty products. Our clients have the chance to select from a large assortment of options that are suitable for every occasion.
+
+
+Download Flower2Go PDF
+
+Daily Deliveries
+Fresh flowers delivered to your door.
+
+About Us
+Welcome to Flower2Go, your premier destination for exquisite floral arrangements. We specialize in creating beautiful bouquets and arrangements for all occasions, from weddings to daily celebrations. Our experienced florists are dedicated to bringing your floral visions to life.
+
+
+Contact Us
+ Email: walsal201@gmail.com
+
+ Tel: +251-911-628248
+
+ Location: Bole, Atlas Hotel
+Addis Ababa, Ethiopia
+
+
+Get in Touch
+ Manager: Walid Ibrahim
+
+© 2025 Flower2Go. All rights reserved.
+
+Privacy Policy Terms of Service Contact Us
